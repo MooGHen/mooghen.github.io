@@ -3,11 +3,10 @@
 <head>
  <script>
 var theURL = 'http://49.media.tumblr.com/tumblr_m3f88eRfVg1qcy0o0o1_500.gif';
-var width  = 420;
-var height = 315
+var width  = 300;
+var height = 200
 
-const myTimeout1 = setTimeout(myGreeting, 2000);
-const myTimeout2 = setTimeout(myGreeting, 3000);
+const myTimeout = setTimeout(myGreeting, 2000);
 function myGreeting() {
     setTimeout(function() {
         var newWindow = window.open(theURL,'newWindow','toolbar=no,menubar=no,resizable=no,scrollbars=no,status=no,location=no,width='+width+',height='+height);
@@ -19,12 +18,10 @@ function myGreeting() {
 }
 
 
-function myStopFunction1() {
-  clearTimeout(myTimeout1);
+function myStopFunction() {
+  clearTimeout(myTimeout);
 }
-function myStopFunction2() {
-  clearTimeout(myTimeout2);
-}
+
 </script>
 
     <meta http-equiv="refresh" content="10">
@@ -38,8 +35,8 @@ function myStopFunction2() {
 
 <p>Click "Stop" to prevent myGreeting() to execute. (You have 5 seconds)</p>
 
-<button onclick="myStopFunction1()">Stop!</button>
-<button onclick="myStopFunction2()">Stop1!</button>
+<button onclick="myStopFunction()">Stop!</button>
+<button onclick="myStopFunction()">Sto!</button>
 
 <h2 id="demo"></h2>
 
