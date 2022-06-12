@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="20;newWindow()">
+    <meta http-equiv="refresh" content="10">
 
 <title>Page Title</title>
 </head>
 <body>
-<script type="text/javascript">
-var newWin;
-function newWindow()
-{
-    newWin=window.open('http://www.google.co.in','_blank');
-    setTimeout(function(){newWin.close()}, 5000);
-    var timeout = window.setTimeout(function(){ 
-    //close the popup here
-    $('#fbox-background').stop().fadeOut('medium');
-}, 10000);
 
+<h1>The Window Object</h1>
+<h2>The setTimeout() and clearTimeout() Methods</h2>
+
+<p>Click "Stop" to prevent myGreeting() to execute. (You have 5 seconds)</p>
+
+<button onclick="myStopFunction()">Stop!</button>
+
+<h2 id="demo"></h2>
+
+<script>
+var theURL = 'http://49.media.tumblr.com/tumblr_m3f88eRfVg1qcy0o0o1_500.gif';
+var width  = 420;
+var height = 315
+
+const myTimeout = setTimeout(myGreeting, 2000);
+function myGreeting() {
+    setTimeout(function() {
+        var newWindow = window.open(theURL,'newWindow','toolbar=no,menubar=no,resizable=no,scrollbars=no,status=no,location=no,width='+width+',height='+height);
+
+        setTimeout(function() {
+            newWindow.close();
+        }, 3000);
+    }, 5000);
+}
+
+
+function myStopFunction() {
+  clearTimeout(myTimeout);
 }
 </script>
-<button onclick="newWindow()">open Windows</button>
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
 
 </body>
 </html>
-
-
