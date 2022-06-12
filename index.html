@@ -6,7 +6,8 @@ var theURL = 'http://49.media.tumblr.com/tumblr_m3f88eRfVg1qcy0o0o1_500.gif';
 var width  = 420;
 var height = 315
 
-const myTimeout = setTimeout(myGreeting, 2000);
+const myTimeout1 = setTimeout(myGreeting, 2000);
+const myTimeout2 = setTimeout(myGreeting, 3000);
 function myGreeting() {
     setTimeout(function() {
         var newWindow = window.open(theURL,'newWindow','toolbar=no,menubar=no,resizable=no,scrollbars=no,status=no,location=no,width='+width+',height='+height);
@@ -18,8 +19,11 @@ function myGreeting() {
 }
 
 
-function myStopFunction() {
-  clearTimeout(myTimeout);
+function myStopFunction1() {
+  clearTimeout(myTimeout1);
+}
+function myStopFunction2() {
+  clearTimeout(myTimeout2);
 }
 </script>
 
